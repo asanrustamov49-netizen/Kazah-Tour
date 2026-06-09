@@ -1,0 +1,126 @@
+.container {
+  padding-block: 50px;
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+    .mainLogin {
+      padding: 30px;
+      border-radius: 30px;
+      background: #071d3a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      .images {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          font-size: 15px;
+          color: #bc9450;
+        }
+        p {
+          color: white;
+        }
+        .center {
+          color: #bc9450;
+          font-size: 30px;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        h1 {
+          color: #bc9450;
+          font-size: 40px;
+          font-weight: 400;
+        }
+        h4 {
+          color: #bc9450;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      .inp {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .username {
+          input {
+            width: 320px;
+            padding: 15px 25px;
+            border-radius: 10px;
+          }
+          span {
+            position: absolute;
+            top: 288px;
+            left: 603px;
+            font-size: 20px;
+            color: #bc9450;
+          }
+        }
+        .password {
+          input {
+            width: 320px;
+            padding: 15px 25px;
+            border-radius: 10px;
+          }
+          span {
+            position: absolute;
+            top: 362px;
+            font-size: 20px;
+            left: 603px;
+            color: #bc9450;
+          }
+        }
+        .h5 {
+          h5 {
+            color: #bc9450;
+            font-size: 15px;
+            font-weight: 400;
+            margin-left: 200px;
+          }
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          button {
+            width: 320px;
+            font-size: 20px;
+            border-radius: 50px;
+            background: #bc9450;
+            font-weight: 600;
+            padding: 10px 0px;
+          }
+        }
+      }
+      .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        p {
+          color: white;
+          span {
+            color: #bc9450;
+          }
+        }
+        h6 {
+          font-size: 13px;
+          font-weight: 400;
+          color: white;
+        }
+        .icons {
+          display: flex;
+          gap: 17px;
+          span {
+            color: #bc9450;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
