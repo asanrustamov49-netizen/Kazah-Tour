@@ -3,15 +3,16 @@ import "./cardList.scss"
 import TourCards from "@/components/ui/tourCards/TourCards";
 
 interface IData{
-    data: ITourCard[]
+    data: ITourCard[];
+    name: string
 }
 
-const CardList = ({data}: IData) => {
+const CardList = ({data, name}: IData) => {
     return (
         <section id="tour-list">
             <div className="container">
                 <div className="tour-list">
-                    <h1>FEATURED LUXURY TOURS</h1>
+                    <h1>{name}</h1>
                     <div className="tour-cards">
                         {
                         data.map((el)=> (

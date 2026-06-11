@@ -76,8 +76,10 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <CardList data={data} />
-      <ClientReviews reviews={[{message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}]}/>
+      <CardList data={data} name="FEATURED LUXURY TOURS" />
+      <CardList data={data} name="POPULAR TOURS" />
+      <CardList data={data} name="TOURS FOR FAMILY" />
+      <ClientReviews reviews={[{message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcde swedfcefedfe dfedffrfdfcdedfd", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}]}/>
     </>
   );
 };
