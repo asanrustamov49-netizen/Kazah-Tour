@@ -2,9 +2,12 @@ import scss from "./footer.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
-  const [isSub, setIsSub] = useState<boolean>(false);
+  const [isSub, setIsSub] = useState<boolean>(() => {
+    return localStorage.getItem("subscribed") === "true";
+  });
   const [email, setEmail] = useState<any>(false);
   return (
     <footer className={scss.container}>
@@ -76,33 +79,41 @@ const Footer = () => {
                   />
                   <button
                     style={{
-                      // background: email ? "#bc9450" : "grey",
-                      // color: email ? "white" : "red",
-                      cursor: email ? "pointer" : "not-allowed",
+                      cursor: email || isSub ? "pointer" : "not-allowed",
                     }}
-                    disabled={!email}
-                    onClick={() => setIsSub(true)}
+                    // disabled={!email}
+                    onClick={() => {
+                      const newValue = !isSub;
+                      setIsSub(newValue);
+                      localStorage.setItem("subscribed", String(newValue));
+                    }}
                   >
-                    SUBSCRIBE
+                    {isSub ? "UNSUBSCRIBE" : "SUBSCRIBE"}
                   </button>
                 </div>
-                {isSub ? (
-                  <div className={scss.sub}>
-                    Subscribed! <img src="./Vector.png" alt="" />
-                  </div>
-                ) : (
-                  ""
-                )}
+                <AnimatePresence>
+                  {isSub && (
+                    <motion.div
+                      className={scss.sub}
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      Subscribed! <img src="./Vector.png" alt="" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>
           <div className={scss.bottom}>
             <h5>Copylight www.auroratravel.com</h5>
             <div className={scss.icons}>
-                <img src="./download 12.png" alt="" />
-                <img src="./download 11.png" alt="" />
-                <img src="./download 10.png" alt="" />
-                <img src="./download 9.png" alt="" />
+              <img src="./download 12.png" alt="" />
+              <img src="./download 11.png" alt="" />
+              <img src="./download 10.png" alt="" />
+              <img src="./download 9.png" alt="" />
             </div>
           </div>
         </div>

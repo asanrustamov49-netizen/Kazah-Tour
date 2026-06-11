@@ -88,7 +88,7 @@ const Admin = () => {
                 required: true,
               })}
               onChange={(e) => setName(e.target.value)}
-              type="text"
+              type="text" 
               placeholder="Price"
             />
             <div className={scss.images}>

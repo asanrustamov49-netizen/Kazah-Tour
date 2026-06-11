@@ -33,9 +33,8 @@ const Header = () => {
   }, [pathname]);
   const handleLogin = () => {
     push("/login");
-    setIsLogged(true);
+    setIsLogged((prev) => !prev);
   };
-
 
   return (
     <header className={scss.container}>
@@ -43,7 +42,11 @@ const Header = () => {
         <div className={scss.mainContainer}>
           <img src="./image 1.png" alt="logo" />
           <nav className={scss.nav} ref={navRef}>
-            <Link href="/" data-active={pathname === "/"}>
+            <Link
+              href="/"
+              onClick={() => setIsLogged(false)}
+              data-active={pathname === "/"}
+            >
               HOME
             </Link>
             <Link href="/about" data-active={pathname === "/about"}>
@@ -72,6 +75,18 @@ const Header = () => {
                 <motion.button
                   onClick={() => handleLogin()}
                   className={scss.signBtn}
+                  initial={{ opacity: 0, y: -70 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -70 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Sign In
+                </motion.button>
+              )}
+            </AnimatePresence>
+            {/* <AnimatePresence>
+              {!isLogged && (
+                <motion.button
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
@@ -79,7 +94,7 @@ const Header = () => {
                   Sign In
                 </motion.button>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
         </div>
       </div>
