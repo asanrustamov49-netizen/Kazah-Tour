@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
+
+#reviews{
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 90px;
+        h1{
+            font-family: "Alan Sans";
+            font-size: 45px;
+        }
+        .reviews-cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            max-width: 1200px;
+            overflow-x: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+}

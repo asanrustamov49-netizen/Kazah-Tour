@@ -1,5 +1,7 @@
+import Tour from "@/components/pages/tour/Tour";
+
 const page = () => {
-  return <div></div>;
+  return <Tour />;
 };
 
 export default page;

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0");
+@import url("https://fonts.googleapis.com/css2?family=Geom:ital@0");
+
+.banner-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #071d3a;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  height: 80px;
+  input {
+    width: 550px;
+    height: 50px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  button {
+    padding: 5px 10px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Geom";
+    background-color: #bc9450;
+    color: #fff;
+    width: 120px;
+  }
+}
