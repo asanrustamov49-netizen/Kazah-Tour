@@ -1,0 +1,107 @@
+.container {
+  background: #071d3a;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  .mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* ================= NAV ================= */
+    nav {
+      display: flex;
+      gap: 50px;
+      position: relative;
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        padding-bottom: 5px;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        color: #bc9450;
+      }
+
+      .active {
+        color: #bc9450;
+      }
+
+      .underline {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background: #bc9450;
+        border-radius: 10px;
+        transition: 0.4s ease;
+      }
+    }
+
+    /* ================= RIGHT SIDE ================= */
+    .sign {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        color: #ffffff;
+        font-size: 34px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      span:hover {
+        color: #bc9450;
+      }
+
+      /* BUTTON */
+      .signBtn {
+        padding: 7px 12px;
+        font-size: 18px;
+        background: #bc9450;
+        color: #ffffff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        border: none;
+      }
+
+      .signBtn:hover {
+        transform: scale(1.05);
+        background: #d1a75a;
+      }
+
+      /* ANIMATION */
+      .signBtn {
+        animation: fadeIn 0.6s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .signBtn.exit {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

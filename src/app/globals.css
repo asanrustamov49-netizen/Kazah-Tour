@@ -12,12 +12,22 @@ a {
 body {
 }
 
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1 {
+}
+h2 {
+  font-size: 28px;
+}
+p {
+  font-size: 14px;
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
 
 button {
   border: none;
@@ -31,7 +41,11 @@ input {
 
 .container {
   max-width: 1240px;
-  width: 100%; 
+  width: 100%;
   margin-inline: auto;
   padding: 0 20px;
+}
+
+&::-webkit-scrollbar {
+  display: none;
 }

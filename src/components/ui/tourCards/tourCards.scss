@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px;
+    background-color: #071D3A;
+    border: 4px solid #BC9450;
+    border-radius: 40px;
+    gap: 10px;
+    width: 400px;
+    height: 475px;
+    color: #fff;
+    cursor: pointer;
+    img{
+        width: 100%;
+        border-radius: 30px;
+        border: 2px solid #fff;
+    }
+    h3{
+        color: #0B8E48;
+        font-family: "Spinnaker";
+        font-size: 40px;
+    }
+    button{
+        font-family: "Spinnaker";
+        color: #fff;
+        font-size: 25px;
+        background-color: #BC9450;
+        padding: 10px 20px;
+        border-radius: 14px;
+    }
+
+}
