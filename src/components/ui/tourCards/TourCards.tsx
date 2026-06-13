@@ -8,10 +8,10 @@ interface ITourProps {
 const TourCards = ({ tour }: ITourProps) => {
   return (
     <div className="card">
-      <img src={tour.img} alt="" />
+      <img src={tour.url} alt="" />
       <h2>{tour.name}</h2>
       <p>{tour.shortOverview}</p>
-      <h3>${tour.price}</h3>
+      <h3>${tour.price}, 00</h3>
       <button>VIEW TOUR</button>
     </div>
   );
