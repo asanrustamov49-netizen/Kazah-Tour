@@ -1,4 +1,4 @@
-import { IReview } from "@/components/hooks/types";
+import { IReview } from "@/types/Types";
 import "./reviewsCards.scss"
 
 interface IReviews {

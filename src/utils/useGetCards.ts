@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+import { TourApi } from "./Api/TourApi";
 
 export const useGetCards = () => useQuery({
     queryKey: ['tour'], 
     queryFn: async () => {
-        const response = await
+        const response = await TourApi.get("/")
+        return response.data
     }
 })

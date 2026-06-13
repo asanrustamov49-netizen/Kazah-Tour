@@ -11,6 +11,12 @@ export interface ITourCard {
 
 
 export interface IReview {
-    message: string
+    comment: string
     name: string
+}
+
+
+export interface IAddComment {
+  comments: IReview[]
+  addComment: (name: string, comment: string)=> void 
 }
