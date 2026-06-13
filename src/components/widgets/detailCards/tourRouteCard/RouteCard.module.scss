@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: solid;
+    background: #071d3a;
+    padding: 25px;
+    width: 670px;
+    height: 240px;
+    border-radius: 15px;
+  }
+}

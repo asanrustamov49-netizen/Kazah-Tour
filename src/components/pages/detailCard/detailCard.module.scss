@@ -1,0 +1,21 @@
+.container {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW3I8WaguQmkcLYPSRoo119sdfTwyibs8VnQ4i6Cw_vNCBMxNJ15HXqr4M&s=10");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
+  .mainContainer {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 400px;
+
+      .description {
+        position: absolute;
+        right: 0;
+        top: 25%;
+      }
+    }
+  }
+}
