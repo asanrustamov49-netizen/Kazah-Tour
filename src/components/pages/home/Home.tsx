@@ -1,9 +1,9 @@
-import { ITourCard } from "@/components/hooks/types";
 import Banner from "@/components/widgets/banner/Banner";
 import CardList from "@/components/widgets/cardList/CardList";
 import ClientReviews from "@/components/widgets/clientReviews/ClientReviews";
+import { ITourCard } from "@/types/Types";
 
-const data: ITourCard[] = [
+export const data: ITourCard[] = [
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQZaMnbrRWmdrZPp_p0I5N2jHelymM7sYTWGth4Q2pw&s=10",
     name: "KAZAKHSTAN ASTANA",

@@ -1,0 +1,22 @@
+.container{
+    background: #F7F1E3;
+    padding-block: 50px;
+    .mainContainer{
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                color: #071D3A;
+                font-size: 40px;
+                font-weight: 400;
+            }
+            select{
+                padding: 10px 20px;
+                font-size: 23px;
+                border: 2px solid #BC9450;
+                border-radius: 10px;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import AboutBanner from "@/components/widgets/aboutBanner/AboutBanner";
 import scss from "./about.module.scss";
+import Text from "@/components/widgets/text/Text";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
       <AboutBanner />
       <div className="container">
         <div className={scss.mainContainer}>
-          
+          <Text />
           <div className={scss.offer}>
             <h1>We Offer</h1>
             <div className={scss.icons}>

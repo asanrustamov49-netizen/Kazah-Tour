@@ -1,4 +1,4 @@
-import { ITourCard } from "@/components/hooks/types";
+import { ITourCard } from "@/types/Types";
 import "./cardList.scss"
 import TourCards from "@/components/ui/tourCards/TourCards";
 
