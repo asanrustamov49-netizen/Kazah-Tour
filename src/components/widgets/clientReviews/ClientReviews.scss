@@ -15,10 +15,10 @@
         .reviews-cards{
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 100px;
             max-width: 1200px;
             overflow-x: scroll;
+            scroll-behavior: smooth;
             &::-webkit-scrollbar{
                 display: none;
             }

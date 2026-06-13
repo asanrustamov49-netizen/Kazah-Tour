@@ -1,4 +1,4 @@
-import { IReview } from "@/components/hooks/types";
+import { IReview } from "@/types/Types";
 import "./reviewsCards.scss"
 
 interface IReviews {
@@ -8,8 +8,8 @@ interface IReviews {
 const ReviewsCards = ({reviews}: IReviews) => {
     return (
         <div className="review-card">
-            <h1>"{reviews.message}"</h1>
-            <h2>{reviews.name}</h2>
+            <h2>"{reviews.message}"</h2>
+            <h3>{reviews.name}</h3>
         </div>
     );
 };

@@ -1,0 +1,28 @@
+.inp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1500px;
+  gap: 10px;
+  input {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #918f8f;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  button {
+    width: 142px;
+    padding: 20px;
+    border: 2px solid #BC9350;
+    font-size: 40px;
+    border-radius: 15px;
+    height: 67px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F2646;
+  }
+}

@@ -1,10 +1,20 @@
-.review-card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 40px;
-    padding: 15px;
-    border: 1px solid #918F8F;
-    border-radius: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap");
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  height: 180px;
+  padding: 20px;
+  border: 1px solid #918f8f;
+  border-radius: 25px;
+  h2 {
+    font-family: "Alan Sans";
+    font-size: 20px;
+    width: 320px;
+    white-space: normal;
+    word-break: normal;
+  }
 }

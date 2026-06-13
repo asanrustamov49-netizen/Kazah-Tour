@@ -13,10 +13,16 @@
             
         }
         .tour-cards{
-            display: grid;
-            grid-template-columns: repeat(3, 500px);
+            display: flex;
+            align-items: center;
+            max-width: 1550px;
+            overflow-x: scroll;
             gap: 40px;
+            margin-left: 10px;
             margin-bottom: 50px;
+            &::-webkit-scrollbar{
+                display: none;
+            }
         }
     }
 }

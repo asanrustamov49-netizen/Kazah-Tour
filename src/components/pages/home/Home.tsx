@@ -76,16 +76,8 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <CardList data={data} />
-      <ClientReviews
-        reviews={[
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-        ]}
-      />
+      <CardList data={data} name={data[0].name}/>
+      <ClientReviews reviews={[{message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}, {message: "asdcvfwdfcdes", name: "emily"}]}/>
     </>
   );
 };
