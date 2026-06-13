@@ -5,9 +5,10 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
-  const [isSub, setIsSub] = useState<boolean>(() => {
-    return localStorage.getItem("subscribed") === "true";
-  });
+  const [isSub, setIsSub] = useState<boolean>(true)
+  // => {
+    // return localStorage.getItem("subscribed") === "true";
+  // });
   const [email, setEmail] = useState<any>(false);
   return (
     <footer className={scss.container}>
