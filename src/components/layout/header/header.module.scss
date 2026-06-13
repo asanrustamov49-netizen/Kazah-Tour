@@ -41,10 +41,12 @@
       .underline {
         position: absolute;
         bottom: 0;
+        left: 0;
         height: 2px;
         background: #bc9450;
         border-radius: 10px;
         transition: 0.4s ease;
+        opacity: 0;
       }
     }
 
@@ -71,36 +73,35 @@
         font-size: 18px;
         background: #bc9450;
         color: #ffffff;
+        // transform: translateX(-50%);
         border-radius: 10px;
         cursor: pointer;
-        transition: all 0.4s ease;
         border: none;
       }
 
       .signBtn:hover {
-        transform: scale(1.05);
         background: #d1a75a;
       }
 
       /* ANIMATION */
       .signBtn {
-        animation: fadeIn 0.6s ease;
+        animation: 0.6s ease;
       }
 
       @keyframes fadeIn {
         from {
           opacity: 0;
-          transform: translateY(-10px);
+          // transform: translateY(-50px);
         }
         to {
-          opacity: 1;
+          opacity: 0;
           transform: translateY(0);
         }
       }
 
       .signBtn.exit {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-50px);
       }
     }
   }
