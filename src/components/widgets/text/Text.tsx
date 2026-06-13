@@ -1,7 +1,7 @@
 import scss from "./text.module.scss";
 const Text = () => {
   return (
-    <div>
+    <div className={scss.text}>
       <div className={scss.kz}>
         <h1>Kazakhstan is...</h1>
         <div>
