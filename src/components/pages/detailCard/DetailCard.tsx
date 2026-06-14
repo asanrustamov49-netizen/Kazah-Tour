@@ -24,7 +24,7 @@ const DetailCard = () => {
             <RouteCard />
           </div>
         </div>
-        <BookTour />
+        <BookTour tour={tours?.[0]}/>
         <RecomendTour tour={tours} />
       </div>
     </div>

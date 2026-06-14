@@ -1,11 +1,13 @@
 .container {
-  background: #071d3a;
+  background: #090a3d;
+  // background: whitesmoke;
   padding: 40px;
   .mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: whitesmoke;
+    font-weight: 400;
     gap: 45px;
     .cards {
       display: flex;

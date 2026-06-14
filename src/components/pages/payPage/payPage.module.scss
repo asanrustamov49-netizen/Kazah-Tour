@@ -1,0 +1,95 @@
+.container {
+  background: #f7f1e3;
+  padding-block: 40px;
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+    .pay {
+      .images {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          font-size: 15px;
+          color: #bc9450;
+        }
+        p {
+          color: white;
+        }
+        .center {
+          color: #bc9450;
+          font-size: 30px;
+        }
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      //   align-items: center;
+      padding: 30px;
+      border-radius: 30px;
+      background: #071d3a;
+      div {
+        h2 {
+          margin-bottom: 10px;
+          font-size: 20px;
+          color: #bc9450;
+          font-weight: 400;
+        }
+        input {
+          width: 100%;
+          padding: 10px 20px;
+          border-radius: 10px;
+        }
+        .date {
+          position: absolute;
+          right: 615px;
+          top: 290px;
+          color: #bc9450;
+          font-size: 30px;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px 17px;
+          border-radius: 10px;
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        justify-content: center;
+        h1 {
+          color: #f7f1e3;
+          font-size: 23px;
+          font-weight: 400;
+        }
+        h4 {
+          color: #0f9a50;
+          font-size: 23px;
+          font-weight: 400;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        width: 260px;
+        margin-left: 25px;
+        border-radius: 50px;
+        color: #f7f1e3;
+        background: #bc9450;
+        font-size: 23px;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        span {
+          font-size: 40px;
+          color: #bc9450;
+        }
+      }
+    }
+  }
+}

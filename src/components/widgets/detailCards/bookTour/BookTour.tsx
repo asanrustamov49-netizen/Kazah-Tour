@@ -1,6 +1,13 @@
+import { useRouter } from "next/navigation";
 import scss from "./BookTour.module.scss";
+import { ITourCard } from "@/types/Types";
 
-const BookTour = () => {
+interface IBouk {
+  tour: ITourCard
+}
+
+const BookTour = ({tour}: IBouk) => {
+  const {push} = useRouter()
   return (
     <div className={scss.container}>
       <div className={scss.mainContainer}>
@@ -10,7 +17,7 @@ const BookTour = () => {
             <span>$3,199</span>
             per person.
           </h1>
-          <button>BOOK A TOUR</button>
+          <button onClick={() => push(`/payPage/${tour._id}`)}>BOOK A TOUR</button>
         </div>
       </div>
     </div>
