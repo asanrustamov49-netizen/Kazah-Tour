@@ -5,15 +5,14 @@ import ClientReviews from "@/components/widgets/clientReviews/ClientReviews";
 import { useAddComment } from "@/utils/useAddComment";
 
 const Home = () => {
-  const { comments } = useAddComment();
 
   return (
     <>
       <Banner />
-      <CardList />
-      <CardList />
-      <CardList />
-      <ClientReviews reviews={comments} />
+      <CardList name="Kazah Tours" />
+      <CardList name="Popular Tours" />
+      <CardList name="New Arrivals" />
+      <ClientReviews/>
     </>
   );
 };
