@@ -14,7 +14,7 @@ const BookTour = ({ tour }: IBouk) => {
   const { push } = useRouter();
   const { orders } = useOrders();
 
-  const exists = orders.some((item) => item._id === tour._id);
+  const exists = orders.some((item) => item.tour._id === tour._id);
 
   const handleBook = () => {
     if (exists) {
