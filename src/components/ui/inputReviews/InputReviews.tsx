@@ -2,6 +2,7 @@
 import { IoMdSend } from "react-icons/io";
 import "./inputReviews.scss";
 import { useForm } from "react-hook-form";
+import { useAddComment } from "@/utils/useAddComment";
 
 interface IForm {
   message: string;
@@ -9,7 +10,9 @@ interface IForm {
 
 const InputReviews = () => {
   const { register, reset, handleSubmit } = useForm<IForm>();
+  const {addComment} = useAddComment()
   const handleData = (data: IForm) => {
+    addComment("User", data.message)
     reset();
   };
   return (

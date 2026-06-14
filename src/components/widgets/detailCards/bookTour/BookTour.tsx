@@ -13,8 +13,8 @@ const BookTour = ({tour}: IBouk) => {
       <div className={scss.mainContainer}>
         <div className={scss.pay}>
           <h1>
-            Unforgettable Astana tour! <br /> Grab your spot now for only
-            <span>$3,199</span>
+            Unforgettable Astana tour! <br /> Grab your spot now for only 
+            <span> ${tour.price} </span> 
             per person.
           </h1>
           <button onClick={() => push(`/payPage/${tour._id}`)}>BOOK A TOUR</button>

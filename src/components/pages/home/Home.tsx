@@ -1,7 +1,9 @@
+"use client";
 import Banner from "@/components/widgets/banner/Banner";
 import CardList from "@/components/widgets/cardList/CardList";
 import ClientReviews from "@/components/widgets/clientReviews/ClientReviews";
 import { ITourCard } from "@/types/Types";
+import { useAddComment } from "@/utils/useAddComment";
 import { useGetCards } from "@/utils/useGetCards";
 
 // export const data: ITourCard[] = [
@@ -74,19 +76,16 @@ import { useGetCards } from "@/utils/useGetCards";
 // ];
 
 const Home = () => {
+  const { data } = useGetCards();
+  const { comments } = useAddComment();
+  if (!data) return <div>Loading...</div>;
   return (
     <>
       <Banner />
-      <CardList />
-      <ClientReviews
-        reviews={[
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-          { message: "asdcvfwdfcdes", name: "emily" },
-        ]}
-      />
+      <CardList title="Luxury Tours" tour={data} />
+      <CardList title="Popular Tours" tour={data} />
+      <CardList title="Trending Tours" tour={data} />
+      <ClientReviews reviews={comments} />
     </>
   );
 };

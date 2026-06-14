@@ -9,17 +9,28 @@ export interface ITourCard {
   updatedAt: number;
 }
 
-export interface IGetResponse{
-  succes: boolean
-  current_page: number
-  per_page: number
-  total_pages: number
-  total_items: number
-  data: ITourCard[]
+export interface IGetResponse {
+  succes: boolean;
+  current_page: number;
+  per_page: number;
+  total_pages: number;
+  total_items: number;
+  data: ITourCard[];
 }
 
-
 export interface IReview {
-    message: string
-    name: string
+  comment: string;
+  name: string;
+}
+
+export interface IOrderState {
+  orders: ITourCard[];
+  createOrders: (item: ITourCard) => void;
+  removeFromOrder: (id: number) => void;
+  totalOrders: number;
+}
+
+export interface IAddComment {
+  comments: IReview[];
+  addComment: (name: string, comment: string) => void;
 }
