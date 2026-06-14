@@ -49,17 +49,40 @@ const Header = () => {
             >
               HOME
             </Link>
-            <Link href="/about" data-active={pathname === "/about"}>
+            <Link
+              onClick={() => setIsLogged(false)}
+              href="/about"
+              data-active={pathname === "/about"}
+            >
               ABOUT
             </Link>
-            <Link href="/tours" data-active={pathname === "/tours"}>
+            <Link
+              onClick={() => setIsLogged(false)}
+              href="/tours"
+              data-active={pathname === "/tours"}
+            >
               TOURS
             </Link>
-            <Link href="/contacts" data-active={pathname === "/contacts"}>
+            <Link
+              onClick={() => setIsLogged(false)}
+              href="/contacts"
+              data-active={pathname === "/contacts"}
+            >
               CONTACTS
             </Link>
-            <Link href="/admin" data-active={pathname === "/admin"}>
+            <Link
+              onClick={() => setIsLogged(false)}
+              href="/admin"
+              data-active={pathname === "/admin"}
+            >
               ADMIN
+            </Link>
+            <Link
+              onClick={() => setIsLogged(false)}
+              href="/order"
+              data-active={pathname === "/order"}
+            >
+              ORDER
             </Link>
             <span ref={underlineRef} className={scss.underline}></span>
           </nav>

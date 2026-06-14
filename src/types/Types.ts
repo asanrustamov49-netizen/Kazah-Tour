@@ -24,13 +24,21 @@ export interface IReview {
 }
 
 export interface IOrderState {
-  orders: ITourCard[];
-  createOrders: (item: ITourCard) => void;
+  orders: IOrder[];
+  createOrders: (item: IOrder) => void;
   removeFromOrder: (id: number) => void;
-  totalOrders: number;
+}
+
+export interface IOrder {
+  tour: ITourCard;
+  guests: number;
+  date: string;
+  payment: string;
+  totalPrice: number;
 }
 
 export interface IAddComment {
   comments: IReview[];
   addComment: (name: string, comment: string) => void;
+  removeComment: (name: string) => void;
 }

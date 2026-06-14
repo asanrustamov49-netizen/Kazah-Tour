@@ -1,15 +1,14 @@
-"use client"
-import { IGetResponse, ITourCard } from "@/types/Types";
+"use client";
+import { ITourCard } from "@/types/Types";
 import "./cardList.scss";
 import TourCards from "@/components/ui/tourCards/TourCards";
-import { useGetCards } from "@/utils/useGetCards";
 
 interface ICardList {
-  title: string
-  tour: ITourCard[]
+  title: string;
+  tour: ITourCard[];
 }
 
-const CardList = ({title, tour}: ICardList) => {
+const CardList = ({ title, tour }: ICardList) => {
   return (
     <section id="tour-list">
       <div className="container">
@@ -17,7 +16,7 @@ const CardList = ({title, tour}: ICardList) => {
           <h1>{title}</h1>
           <div className="tour-cards">
             {tour?.map((el) => (
-              <TourCards tour={el} key={el._id}/>
+              <TourCards tour={el} key={el._id} />
             ))}
           </div>
         </div>

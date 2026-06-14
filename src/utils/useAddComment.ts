@@ -11,6 +11,11 @@ export const useAddComment = create<IAddComment>()(
           comments: [...state.comments, { name, comment }],
         }));
       },
+      removeComment: (name) => {
+        set((state) => ({
+          comments: state.comments.filter((item) => item.name !== name),
+        }));
+      },
     }),
     { name: "comments" },
   ),

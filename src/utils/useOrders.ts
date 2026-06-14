@@ -9,17 +9,13 @@ export const useOrders = create<IOrderState>()(
       createOrders: (item) => {
         set((state) => ({
           orders: [...state.orders, item],
-          totalOrders: state.totalOrders + 1,
         }));
       },
       removeFromOrder: (id) => {
         set((state) => ({
-          orders: state.orders.filter((item) => item._id !== id),
-          totalOrders:
-            state.totalOrders == 0 ? state.totalOrders : state.totalOrders - 1,
+          orders: state.orders.filter((item) => item.tour._id !== id),
         }));
       },
-      totalOrders: 0,
     }),
     { name: "orders" },
   ),

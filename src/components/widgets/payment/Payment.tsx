@@ -24,13 +24,18 @@ interface IPay {
 const Payment = ({ tour }: IPay) => {
   const { createOrders } = useOrders();
   const { push } = useRouter();
+  const [guests, setGuests] = useState(1);
   const { register, reset, handleSubmit } = useForm<IForm>();
   const [succes, setSucces] = useState<boolean>(false);
-  const order = (data: ITourCard) => {
-    push("/order");
-    createOrders(data);
-  };
   const handleData = (data: IForm) => {
+    const guestsCount = Number(data.guests.split(" ")[0]);
+    createOrders({
+      tour: tour!,
+      guests: guestsCount,
+      date: data.date,
+      payment: data.payment,
+      totalPrice: tour!.price * guestsCount,
+    });
     setSucces(true);
     reset();
   };
@@ -54,10 +59,13 @@ const Payment = ({ tour }: IPay) => {
       </div>
       <div className={scss.guests}>
         <h2>GUESTS</h2>
-        <select {...register("guests")}>
-          <option value="1 adult">1 adult</option>
-          <option value="1 adult">2 adult</option>
-          <option value="1 adult">3 adult</option>
+        <select
+          {...register("guests")}
+          onChange={(e) => setGuests(Number(e.target.value))}
+        >
+          <option value="1">1 Adult</option>
+          <option value="2">2 Adults</option>
+          <option value="3">3 Adults</option>
         </select>
       </div>
       <div className={scss.payment}>
@@ -82,7 +90,7 @@ const Payment = ({ tour }: IPay) => {
       </div>
       <div className={scss.price}>
         <h1>TOTAL:</h1>
-        <h4>${tour?.price}</h4>
+        <h4>${tour?.price! * guests}</h4>
       </div>
       <button type="submit">TO ISSUE</button>
       <div className={scss.icons}>
@@ -100,7 +108,7 @@ const Payment = ({ tour }: IPay) => {
           </p>
           <span>✅</span>
           <h3>The Order Is Done Succesful!</h3>
-          <button onClick={() => order(tour!)}>Go To Orders</button>
+          <button onClick={() => push("/order")}>Go To Orders</button>
         </div>
       ) : (
         ""

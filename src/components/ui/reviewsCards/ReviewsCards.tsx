@@ -8,7 +8,7 @@ interface IReviews {
 const ReviewsCards = ({reviews}: IReviews) => {
     return (
         <div className="review-card">
-            <h2>"{reviews.message}"</h2>
+            <h2>"{reviews.comment}"</h2>
             <h3>{reviews.name}</h3>
         </div>
     );
