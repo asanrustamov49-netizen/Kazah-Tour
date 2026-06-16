@@ -64,6 +64,7 @@ const Login = () => {
                   }}
                   disabled={!disabled}
                   type="submit"
+
                 >
                   LOG IN
                 </button>

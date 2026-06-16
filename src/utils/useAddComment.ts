@@ -9,9 +9,13 @@ export const useAddComment = create<IAddComment>()(
       comments: [],
       addComment: (name, comment) => {
         console.log("Adding comment:", { name, comment });
-        // if(!comment || comment.trim() === "") return;
         set((state) => ({
           comments: [...state.comments, { name, comment }],
+        }));
+      },
+      removeComment: (name) => {
+        set((state) => ({
+          comments: state.comments.filter((item) => item.name !== name),
         }));
       },
     }),

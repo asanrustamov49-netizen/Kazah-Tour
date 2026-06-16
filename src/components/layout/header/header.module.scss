@@ -73,14 +73,17 @@
         font-size: 18px;
         background: #bc9450;
         color: #ffffff;
-        // transform: translateX(-50%);
         border-radius: 10px;
         cursor: pointer;
         border: none;
+        transition: 0.3s;
       }
 
       .signBtn:hover {
-        background: #d1a75a;
+        padding: 9px 14px;
+        // border-radius: 12px;
+        font-size: 20px;
+        // background: #d1a75a;
       }
 
       /* ANIMATION */

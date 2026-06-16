@@ -4,10 +4,8 @@ import ReviewsCards from "@/components/ui/reviewsCards/ReviewsCards";
 import InputReviews from "@/components/ui/inputReviews/InputReviews";
 import { useAddComment } from "@/utils/useAddComment";
 
-
-
 const ClientReviews = () => {
-  const {comments} = useAddComment()
+  const { comments } = useAddComment();
   return (
     <section id="reviews">
       <div className="container">
@@ -23,6 +21,7 @@ const ClientReviews = () => {
                 <h4>No Comments...</h4>
               )
             }
+
           </div>
           <InputReviews />
         </div>

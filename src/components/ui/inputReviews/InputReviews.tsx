@@ -1,25 +1,19 @@
-"use client"
+"use client";
 import { IoMdSend } from "react-icons/io";
 import "./inputReviews.scss";
 import { useForm } from "react-hook-form";
 import { useAddComment } from "@/utils/useAddComment";
 
 interface IForm {
+  name: string;
   message: string;
 }
 
 const InputReviews = () => {
-  const { register, reset, handleSubmit } = useForm<IForm>({
-    defaultValues: {
-      message: "",
-    },
-  }
-  );
-
-  const {addComment} = useAddComment()
+  const { register, reset, handleSubmit } = useForm<IForm>();
+  const { addComment } = useAddComment();
   const handleData = (data: IForm) => {
-    console.log("Form data:", data);
-    addComment("User", data.message)
+    addComment(data.name, data.message);
     reset();
   };
   return (
@@ -28,6 +22,11 @@ const InputReviews = () => {
         {...register("message", { required: true, minLength: 1 })}
         type="text"
         placeholder="Comment..."
+      />
+      <input
+        {...register("name", { required: true })}
+        type="text"
+        placeholder="Enter Name..."
       />
       <button type="submit">
         <IoMdSend />

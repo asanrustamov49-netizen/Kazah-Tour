@@ -1,0 +1,29 @@
+.container {
+  .mainContainer {
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: solid;
+      padding: 25px;
+      width: 350px;
+      border-radius: 10px;
+      color: black;
+      background: #f7f1e3;
+      gap: 10px;
+      img {
+        width: 250px;
+        border-radius: 10px;
+      }
+      span {
+        color: limegreen;
+      }
+      button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: #bc9450;
+        color: #f7f1e3;
+      }
+    }
+  }
+}

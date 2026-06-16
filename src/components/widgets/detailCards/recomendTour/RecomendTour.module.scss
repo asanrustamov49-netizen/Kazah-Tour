@@ -1,0 +1,23 @@
+.container {
+  background: #090a3d;
+  // background: whitesmoke;
+  padding: 40px;
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    font-weight: 400;
+    gap: 45px;
+    .cards {
+      display: flex;
+      align-items: center;
+      // overflow-x: scroll;
+      // scrollbar-width: auto;
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
+      gap: 50px;
+    }
+  }
+}

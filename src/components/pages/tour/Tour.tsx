@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import TourCards from "@/components/ui/tourCards/TourCards";
 import scss from "./tour.module.scss";
 import { sort } from "@/utils/common";
@@ -15,13 +15,15 @@ const Tour = () => {
             <select>
               <option value="">Sort By....</option>
               {sort.map((item, idx) => (
-                <option value={idx}>{item}</option>
+                <option key={idx} value={item}>
+                  {item}
+                </option>
               ))}
             </select>
           </div>
           <div className={scss.cards}>
             {tours?.map((item) => (
-              <TourCards  tour={item} key={item._id}/>
+              <TourCards tour={item} key={item._id} />
             ))}
           </div>
         </div>

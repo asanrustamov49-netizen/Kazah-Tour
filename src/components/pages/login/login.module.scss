@@ -7,7 +7,13 @@
     .mainLogin {
       padding: 30px;
       border-radius: 30px;
-      background: #071d3a;
+      background: linear-gradient(
+        180deg,
+        #02143a 0%,
+        #03276a 50%,
+        #02143a 100%
+      );
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -57,7 +63,7 @@
           span {
             position: absolute;
             top: 287px;
-            left: 610px;
+            left: 803px;
             font-size: 20px;
             color: #bc9450;
           }
@@ -72,7 +78,7 @@
             position: absolute;
             top: 362px;
             font-size: 20px;
-            left: 610px;
+            left: 803px;
             color: #bc9450;
           }
         }
@@ -94,6 +100,7 @@
             background: #bc9450;
             font-weight: 600;
             padding: 10px 0px;
+            color: white;
           }
         }
       }
