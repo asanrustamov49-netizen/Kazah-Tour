@@ -9,16 +9,23 @@ interface IForm {
 }
 
 const InputReviews = () => {
-  const { register, reset, handleSubmit } = useForm<IForm>();
+  const { register, reset, handleSubmit } = useForm<IForm>({
+    defaultValues: {
+      message: "",
+    },
+  }
+  );
+
   const {addComment} = useAddComment()
   const handleData = (data: IForm) => {
+    console.log("Form data:", data);
     addComment("User", data.message)
     reset();
   };
   return (
     <form onSubmit={handleSubmit(handleData)} className="inp">
       <input
-        {...register("message", { required: true })}
+        {...register("message", { required: true, minLength: 1 })}
         type="text"
         placeholder="Comment..."
       />
