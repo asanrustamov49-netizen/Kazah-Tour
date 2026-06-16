@@ -21,7 +21,7 @@
   //   align-items: center;
   padding: 30px;
   border-radius: 30px;
-  background: #071d3a;
+  background: linear-gradient(180deg, #02143a 0%, #03276a 50%, #02143a 100%);
   div {
     h2 {
       margin-bottom: 10px;
@@ -84,7 +84,7 @@
       color: #bc9450;
     }
   }
-  .succes{
+  .succes {
     background: white;
     position: absolute;
     top: 350px;
@@ -96,16 +96,16 @@
     padding: 30px;
     left: 600px;
     // justify-content: center;
-    h3{
+    h3 {
       font-size: 20px;
       font-weight: 400;
       color: #071d3a;
     }
-    span{
+    span {
       font-size: 50px;
       text-align: center;
     }
-    p{
+    p {
       cursor: pointer;
       position: absolute;
       top: 10px;

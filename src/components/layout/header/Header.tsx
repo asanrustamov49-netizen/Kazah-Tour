@@ -87,7 +87,7 @@ const Header = () => {
             <span ref={underlineRef} className={scss.underline}></span>
           </nav>
           <div className={scss.sign}>
-            <span>
+            <span onClick={() => push("/")}>
               <IoSearchOutline />
             </span>
             <span>
