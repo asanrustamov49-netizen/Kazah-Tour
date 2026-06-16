@@ -1,6 +1,7 @@
 .container {
   .mainContainer {
-    .card {
+    overflow-x: scroll;
+    .cards {
       display: flex;
       flex-direction: column;
       align-items: center;

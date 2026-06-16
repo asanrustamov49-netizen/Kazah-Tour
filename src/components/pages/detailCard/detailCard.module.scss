@@ -9,13 +9,7 @@
     .cards {
       display: flex;
       flex-direction: column;
-      gap: 400px;
-
-      .description {
-        position: absolute;
-        right: 0;
-        top: 25%;
-      }
+      gap: 300px;
     }
   }
 }

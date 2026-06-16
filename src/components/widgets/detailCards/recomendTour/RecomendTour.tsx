@@ -1,19 +1,19 @@
 import RecomendedCard from "@/components/ui/recomendedCard/RecomendedCard";
 import scss from "./RecomendTour.module.scss";
-import { ITourCard } from "@/types/Types";
-import TourCards from "@/components/ui/tourCards/TourCards";
+import { useGetCards } from "@/utils/useGetCards";
+import { useState } from "react";
 
-interface IRecommendProps {
-  tour: ITourCard[];
-}
-
-const RecomendTour = ({ tour = [] }: IRecommendProps) => {
+const RecomendTour = () => {
+  const [sort_by, setSort_by] = useState<string>("");
+  const { data: tour } = useGetCards({
+    sort_by: sort_by,
+  });
   return (
     <div className={scss.container}>
       <div className={scss.mainContainer}>
         <h1>RECOMENDED TOURS</h1>
         <div className={scss.cards}>
-          {tour.slice(0,3).map((item) => (
+          {tour?.map((item) => (
             <RecomendedCard tour={item} key={item._id} />
           ))}
         </div>
