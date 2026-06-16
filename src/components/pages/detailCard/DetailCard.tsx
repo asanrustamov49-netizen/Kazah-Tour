@@ -8,7 +8,7 @@ import RecomendTour from "@/components/widgets/detailCards/recomendTour/Recomend
 import { useGetCards } from "@/utils/useGetCards";
 
 const DetailCard = () => {
-  const { data: tours } = useGetCards();
+  const { data: tours } = useGetCards({ sort_by: "" });
   if (!tours) return <div>Loading...</div>;
   return (
     <div className={scss.container}>
@@ -24,7 +24,7 @@ const DetailCard = () => {
             <RouteCard />
           </div>
         </div>
-        <BookTour tour={tours?.[0]}/>
+        <BookTour tour={tours?.[0]} />
         <RecomendTour tour={tours} />
       </div>
     </div>
