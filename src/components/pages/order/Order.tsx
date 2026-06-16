@@ -35,6 +35,9 @@ const Order = () => {
                 <div className={scss.info}>
                   <h2>{item.tour.name}</h2>
                   <p>📅 {item.date}</p>
+                  <p>
+                    {item.payment === "Cash" ? "💵" : "💳"} {item.payment}
+                  </p>
                   <p>👤 {item.guests} Adults</p>
                 </div>
                 <div className={scss.removePrice}>

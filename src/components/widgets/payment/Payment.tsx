@@ -94,10 +94,7 @@ const Payment = ({ tour }: IPay) => {
       </div>
       <button type="submit">TO ISSUE</button>
       <div className={scss.icons}>
-        <span>
-          <FaWhatsapp />
-        </span>
-        <span>
+        <span onClick={() => push("/kazahtour")}>
           <RiTelegram2Line />
         </span>
       </div>

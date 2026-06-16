@@ -16,9 +16,10 @@
     cursor: pointer;
     flex-shrink: 0;
     img{
-        width: 100%;
+        width: 340px;
         border-radius: 30px;
         border: 2px solid #fff;
+        max-height: 228px;
     }
     h3{
         color: #0B8E48;
@@ -32,6 +33,10 @@
         background-color: #BC9450;
         padding: 10px 20px;
         border-radius: 14px;
+    }
+    transition: 0.3s ease;
+    &:hover{
+        transform: scale(1.02);
     }
 
 }

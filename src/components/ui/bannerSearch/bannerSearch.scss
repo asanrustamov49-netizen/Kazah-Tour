@@ -27,5 +27,9 @@
     background-color: #bc9450;
     color: #fff;
     width: 120px;
+    transition: 0.3s ease;
+    &:hover{
+      background: #f7c369;
+    }
   }
 }

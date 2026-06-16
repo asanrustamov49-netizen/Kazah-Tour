@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+        background: #f7c369;
+}
+
 input {
   border: none;
   outline: none;

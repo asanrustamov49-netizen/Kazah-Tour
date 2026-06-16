@@ -5,9 +5,13 @@ import ClientReviews from "@/components/widgets/clientReviews/ClientReviews";
 import { ITourCard } from "@/types/Types";
 import { useAddComment } from "@/utils/useAddComment";
 import { useGetCards } from "@/utils/useGetCards";
+import { useState } from "react";
 
 const Home = () => {
-  const { data } = useGetCards();
+  const [sort_by, setSort_by] = useState<string>("")
+  const { data } = useGetCards({
+    sort_by: sort_by
+  });
   const { comments } = useAddComment();
   if (!data) return <div>Loading...</div>;
   if (!comments) return <div>Loading...</div>;

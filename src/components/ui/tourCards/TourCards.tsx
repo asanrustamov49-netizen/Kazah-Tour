@@ -14,7 +14,7 @@ const TourCards = ({tour}: ITourProps) => {
             <img src={tour.url} alt="" />
             <h2>{tour.name}</h2>
             <p>{tour.shortOverview}</p>
-            <h3>${tour.price}, 00</h3>
+            <h3>${tour.price}</h3>
             <button onClick={() => push(`/detailCard/${tour._id}`)}>VIEW TOUR</button>
         </div>
     );
