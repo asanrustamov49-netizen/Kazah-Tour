@@ -41,7 +41,9 @@ const Order = () => {
                   <p>👤 {item.guests} Adults</p>
                 </div>
                 <div className={scss.removePrice}>
-                  <div className={scss.price}>${item.tour.price}</div>
+                  <div className={scss.price}>
+                    ${item.tour.price * item.guests}
+                  </div>
                   <button
                     className={scss.remove}
                     onClick={() => removeFromOrder(item.tour._id)}
@@ -57,9 +59,11 @@ const Order = () => {
                 </Link>
               </div>
             ))}
-            <button className={scss.view} onClick={() => push("/tours")}>
-              View For More Tours!
-            </button>
+            <center>
+              <button className={scss.view} onClick={() => push("/tours")}>
+                View For More Tours!
+              </button>
+            </center>
           </div>
         ) : (
           <div className={scss.empty}>

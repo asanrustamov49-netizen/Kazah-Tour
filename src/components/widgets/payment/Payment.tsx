@@ -100,12 +100,14 @@ const Payment = ({ tour }: IPay) => {
       </div>
       {succes ? (
         <div className={scss.succes}>
-          <p onClick={() => setSucces(false)}>
+          <button type="button" onClick={() => setSucces(false)}>
             <IoMdClose />
-          </p>
+          </button>
           <span>✅</span>
           <h3>The Order Is Done Succesful!</h3>
-          <button onClick={() => push("/order")}>Go To Orders</button>
+          <button type="button" onClick={() => push("/order")}>
+            Go To Orders
+          </button>
         </div>
       ) : (
         ""

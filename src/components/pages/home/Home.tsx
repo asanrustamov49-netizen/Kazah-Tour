@@ -1,27 +1,33 @@
 "use client";
+import scss from './home.module.scss'
 import Banner from "@/components/widgets/banner/Banner";
 import CardList from "@/components/widgets/cardList/CardList";
 import ClientReviews from "@/components/widgets/clientReviews/ClientReviews";
-import { ITourCard } from "@/types/Types";
-import { useAddComment } from "@/utils/useAddComment";
 import { useGetCards } from "@/utils/useGetCards";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [sort_by, setSort_by] = useState<string>("")
+  const [sort_by, setSort_by] = useState<string>("");
   const { data } = useGetCards({
-    sort_by: sort_by
+    sort_by: sort_by,
   });
-  const { comments } = useAddComment();
-  if (!data) return <div>Loading...</div>;
-  if (!comments) return <div>Loading...</div>;
   return (
     <>
-      <Banner />
-      <CardList title="Luxury Tours" tour={data} />
-      <CardList title="Popular Tours" tour={data} />
-      <CardList title="Trending Tours" tour={data} />
-      <ClientReviews reviews={comments} />
-      </>)}
+      {!data ? (
+        <center>
+          <img className={scss.loading} src="./loading.png" alt="" />
+        </center>
+      ) : (
+        <>
+          <Banner />
+          <CardList title="Luxury Tours" tour={data} />
+          <CardList title="Popular Tours" tour={data} />
+          <CardList title="Trending Tours" tour={data} />
+          <ClientReviews />
+        </>
+      )}
+    </>
+  );
+};
 
 export default Home;

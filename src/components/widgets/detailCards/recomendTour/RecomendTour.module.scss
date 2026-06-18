@@ -1,6 +1,5 @@
 .container {
   background: #090a3d;
-  // background: whitesmoke;
   padding: 40px;
   .mainContainer {
     display: flex;
@@ -12,12 +11,12 @@
     .cards {
       display: flex;
       align-items: center;
-      // overflow-x: scroll;
-      // scrollbar-width: auto;
-      // &::-webkit-scrollbar {
-      //   display: none;
-      // }
+      max-width: 1500px;
+      overflow-x: scroll;
       gap: 50px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }

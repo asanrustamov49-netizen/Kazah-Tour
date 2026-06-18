@@ -4,9 +4,11 @@ import Link from "next/link";
 import scss from "./header.module.scss";
 import { IoSearchOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
+import Logo from '../../../../public/image 1.png'
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 const Header = () => {
   const [isLogged, setIsLogged] = useState<boolean>(false);
@@ -40,7 +42,7 @@ const Header = () => {
     <header className={scss.container}>
       <div className="container">
         <div className={scss.mainContainer}>
-          <img src="./image 1.png" alt="logo" />
+          <Image src={Logo} alt="logo"/>
           <nav className={scss.nav} ref={navRef}>
             <Link
               href="/"
@@ -65,8 +67,8 @@ const Header = () => {
             </Link>
             <Link
               onClick={() => setIsLogged(false)}
-              href="/contacts"
-              data-active={pathname === "/contacts"}
+              href="#footer"
+              data-active={pathname === "#footer"}
             >
               CONTACTS
             </Link>

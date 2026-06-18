@@ -86,45 +86,17 @@
           flex-direction: column;
           position: relative;
           gap: 10px;
-          .email {
-            display: flex;
-            gap: 10px;
-            // align-items: center;
-            input {
-              padding: 10px 10px;
-              border-radius: 7px;
-              font-size: 15px;
-            }
-            button {
-              font-size: 17px;
-              color: #ffff;
-              background: #bc9450;
-              padding: 10px 10px;
-              border-radius: 7px;
-            }
-          }
-          .sub {
-            position: absolute;
-            top: 50px;
-            left: 0%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 32px;
-            border-radius: 15px;
-            // font-size: 22px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-            white-space: nowrap;
-            background: #ffff;
-            font-size: 20px;
-            color: #918f8f;
-            // border-radius: 10px;
-            // padding: 7px 10px;
-            img {
-              width: 25px;
-              height: 20px;
-            }
+          button {
+            font-size: 17px;
+            color: #ffff;
+            background: linear-gradient(
+              180deg,
+              #bc9450 0%,
+              #bc7450 50%,
+              #bc6450 100%
+            );
+            padding: 10px 10px;
+            border-radius: 7px;
           }
         }
       }

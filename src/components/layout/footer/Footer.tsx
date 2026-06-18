@@ -1,17 +1,19 @@
 import scss from "./footer.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import f1 from "../../../../public/download 9.png";
+import f2 from "../../../../public/download 10.png";
+import f3 from "../../../../public/download 11.png";
+import f4 from "../../../../public/download 12.png";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
-  const [isSub, setIsSub] = useState<boolean>(true)
-  // => {
-    // return localStorage.getItem("subscribed") === "true";
-  // });
-  const [email, setEmail] = useState<any>(false);
+  const {push} = useRouter()
   return (
-    <footer className={scss.container}>
+    <footer id="footer" className={scss.container}>
       <div className="container1">
         <div className={scss.mainContainer}>
           <div className={scss.top}>
@@ -72,49 +74,17 @@ const Footer = () => {
                 </h1>
               </div>
               <div className={scss.btns}>
-                <div className={scss.email}>
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <button
-                    style={{
-                      cursor: email || isSub ? "pointer" : "not-allowed",
-                    }}
-                    // disabled={!email}
-                    onClick={() => {
-                      const newValue = !isSub;
-                      setIsSub(newValue);
-                      localStorage.setItem("subscribed", String(newValue));
-                    }}
-                  >
-                    {isSub ? "UNSUBSCRIBE" : "SUBSCRIBE"}
-                  </button>
-                </div>
-                <AnimatePresence>
-                  {isSub && (
-                    <motion.div
-                      className={scss.sub}
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      Subscribed! <img src="./Vector.png" alt="" />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <button onClick={() => push("/kazahtour")} >Go For FeedBack!</button>
               </div>
             </div>
           </div>
           <div className={scss.bottom}>
             <h5>Copylight www.auroratravel.com</h5>
             <div className={scss.icons}>
-              <img src="./download 12.png" alt="" />
-              <img src="./download 11.png" alt="" />
-              <img src="./download 10.png" alt="" />
-              <img src="./download 9.png" alt="" />
+              <Image src={f4} alt="" />
+              <Image src={f3} alt="" />
+              <Image src={f2} alt="" />
+              <Image src={f1} alt="" />
             </div>
           </div>
         </div>
