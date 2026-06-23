@@ -19,7 +19,7 @@ const InputReviews = () => {
   return (
     <form onSubmit={handleSubmit(handleData)} className="inp">
       <input
-        {...register("message", { required: true })}
+        {...register("message", { required: true, minLength: 1 })}
         type="text"
         placeholder="Comment..."
       />

@@ -1,3 +1,4 @@
+"use client";
 import "./ClientReviews.scss";
 import ReviewsCards from "@/components/ui/reviewsCards/ReviewsCards";
 import InputReviews from "@/components/ui/inputReviews/InputReviews";
@@ -11,11 +12,16 @@ const ClientReviews = () => {
         <div className="reviews">
           <h1>CLIENT REVIEWS</h1>
           <div className="reviews-cards">
-            {comments.length > 0 ? (
-              comments.map((el) => <ReviewsCards key={el.name} reviews={el} />)
-            ) : (
-              <h2>No Comments...</h2>
-            )}
+            {
+              comments.length > 0 ? (
+                comments.map((el, index) => (
+                  <ReviewsCards reviews={el} key={index} />
+                ))
+              ) : (
+                <h4>No Comments...</h4>
+              )
+            }
+
           </div>
           <InputReviews />
         </div>

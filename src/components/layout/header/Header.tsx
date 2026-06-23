@@ -109,17 +109,6 @@ const Header = () => {
                 </motion.button>
               )}
             </AnimatePresence>
-            {/* <AnimatePresence>
-              {!isLogged && (
-                <motion.button
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                >
-                  Sign In
-                </motion.button>
-              )}
-            </AnimatePresence> */}
           </div>
         </div>
       </div>
